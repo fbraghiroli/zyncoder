@@ -43,6 +43,9 @@
 #include "zynpot.h"
 #include "zyncoder.h"
 
+zynswitch_t zynswitches[MAX_NUM_ZYNSWITCHES];
+zyncoder_t zyncoders[MAX_NUM_ZYNCODERS];
+
 //-----------------------------------------------------------------------------
 // Function headers
 //-----------------------------------------------------------------------------

@@ -38,7 +38,6 @@
 #define ADS1115_VDD 3.3
 
 #define MAX_NUM_ADS1115 2
-struct wiringPiNodeStruct * ads1115_nodes[MAX_NUM_ADS1115];
 
 //-----------------------------------------------------------------------------
 // RV112 data
@@ -74,7 +73,7 @@ typedef struct rv112_st {
 	void *dvbuf;
 	int32_t dvavg;
 } rv112_t;
-rv112_t rv112s[MAX_NUM_RV112];
+extern rv112_t rv112s[MAX_NUM_RV112];
 
 
 #ifdef __cplusplus

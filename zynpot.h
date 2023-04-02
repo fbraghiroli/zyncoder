@@ -55,9 +55,7 @@ typedef struct zynpot_st {
 	int (*setup_behaviour)(uint8_t, int32_t);
 	int32_t (*get_value)(uint8_t);
 } zynpot_t;
-zynpot_t zynpots[MAX_NUM_ZYNPOTS];
-
-void (*zynpot_cb)(int8_t, int32_t);
+extern zynpot_t zynpots[MAX_NUM_ZYNPOTS];
 
 #ifdef __cplusplus
 extern "C" {

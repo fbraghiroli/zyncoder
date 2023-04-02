@@ -31,6 +31,10 @@
 #include "zyncoder.h"
 #include "zynrv112.h"
 
+zynpot_t zynpots[MAX_NUM_ZYNPOTS];
+
+void (*zynpot_cb)(int8_t, int32_t);
+
 //-----------------------------------------------------------------------------
 // Zynpot common API
 //-----------------------------------------------------------------------------

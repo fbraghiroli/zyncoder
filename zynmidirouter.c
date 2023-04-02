@@ -34,6 +34,15 @@
 #include "zynpot.h"
 #include "zynmidirouter.h"
 
+jack_client_t *jack_client;
+jack_ringbuffer_t *jack_ring_internal_buffer;
+jack_ringbuffer_t *jack_ring_ui_buffer;
+jack_ringbuffer_t *jack_ring_ctrlfb_buffer;
+jack_ringbuffer_t *zynmidi_buffer;
+midi_filter_t midi_filter;
+
+int midi_learning_mode;
+
 //-----------------------------------------------------------------------------
 // Library Initialization
 //-----------------------------------------------------------------------------
@@ -491,6 +500,8 @@ int get_midi_learning_mode() {
 // ZynMidi Input/Ouput Port management
 //-----------------------------------------------------------------------------
 
+struct zmop_st zmops[MAX_NUM_ZMOPS];
+
 int zmop_init(int iz, char *name, int midi_chan, uint32_t flags) {
 	if (iz < 0 || iz >= MAX_NUM_ZMOPS) {
 		fprintf(stderr, "ZynMidiRouter: Bad index (%d) initializing ouput port '%s'.\n", iz, name);
@@ -662,6 +673,11 @@ int zmop_get_route_from(int izmop, int izmip) {
 	}
 	return zmops[izmop].route_from_zmips[izmip];
 }
+
+struct zmip_st zmips[MAX_NUM_ZMIPS];
+uint8_t int_buffer[3]; // Buffer for processing internal MIDI events
+uint8_t ui_buffer[3]; // Buffer for processing ui MIDI events
+uint8_t ctrlfb_buffer[3]; // Buffer for processing ctrl fb MIDI events
 
 int zmip_init(int iz, char *name, uint32_t flags) {
 	if (iz < 0 || iz >= MAX_NUM_ZMIPS) {
@@ -866,6 +882,8 @@ void populate_zmip_event(struct zmip_st * zmip) {
 		}
 	}
 }
+
+int midi_thru_enabled;
 
 int set_midi_thru(int enabled) {
 	int j;

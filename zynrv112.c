@@ -42,6 +42,8 @@
 #include "zynpot.h"
 #include "zynrv112.h"
 
+rv112_t rv112s[MAX_NUM_RV112];
+
 //-----------------------------------------------------------------------------
 
 extern void (*zynpot_cb)(int8_t, int32_t);

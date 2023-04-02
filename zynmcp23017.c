@@ -46,6 +46,8 @@
 #define bitClear(value, bit) ((value) &= ~(1UL << (bit)))
 #define bitWrite(value, bit, bitvalue) (bitvalue ? bitSet(value, bit) : bitClear(value, bit))
 
+zynmcp23017_t zynmcp23017s[MAX_NUM_MCP23017];
+
 //-----------------------------------------------------------------------------
 // MCP23017 functions
 //-----------------------------------------------------------------------------
