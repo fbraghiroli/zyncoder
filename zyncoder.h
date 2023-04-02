@@ -25,6 +25,9 @@
  * ******************************************************************
  */
 
+#ifndef ZYNCODER_H
+#define ZYNCODER_H
+
 #include <lo/lo.h>
 
 #if defined(HAVE_WIRINGPI_LIB)
@@ -111,3 +114,5 @@ int32_t get_value_zyncoder(uint8_t i);
 void update_zyncoder(uint8_t i, uint8_t msb, uint8_t lsb);
 
 //-----------------------------------------------------------------------------
+
+#endif // ZYNCODER_H

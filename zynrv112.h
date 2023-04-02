@@ -23,6 +23,9 @@
  * ******************************************************************
  */
 
+#ifndef ZYNRV112_H
+#define ZYNRV112_H
+
 #include <stdlib.h>
 #include <wiringPi.h>
 
@@ -106,3 +109,5 @@ pthread_t init_poll_rv112();
 #ifdef __cplusplus
 }
 #endif
+
+#endif // ZYNRV112_H

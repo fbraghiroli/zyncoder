@@ -23,6 +23,9 @@
  * ******************************************************************
  */
 
+#ifndef ZYNMIDISWAP_H
+#define ZYNMIDISWAP_H
+
 typedef struct mf_arrow_st {
 	uint8_t chan_from;
 	uint8_t num_from;
@@ -40,3 +43,5 @@ uint16_t get_midi_filter_cc_swap(uint8_t chan, uint8_t num);
 void reset_midi_filter_cc_swap();
 
 //-----------------------------------------------------------------------------
+
+#endif // ZYNMIDISWAP_H

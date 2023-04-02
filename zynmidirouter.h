@@ -23,6 +23,9 @@
  * ******************************************************************
  */
 
+#ifndef ZYNMIDIROUTER_H
+#define ZYNMIDIROUTER_H
+
 #include <jack/jack.h>
 #include <jack/midiport.h>
 #include <jack/ringbuffer.h>
@@ -406,3 +409,5 @@ int write_zynmidi_note_off(uint8_t chan, uint8_t num, uint8_t val);
 int write_zynmidi_program_change(uint8_t chan, uint8_t num);
 
 //-----------------------------------------------------------------------------
+
+#endif // ZYNMIDIROUTER_H

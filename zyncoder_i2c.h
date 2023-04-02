@@ -25,6 +25,9 @@
  * ******************************************************************
  */
 
+#ifndef ZYNCODER_I2C_H
+#define ZYNCODER_I2C_H
+
 #include <lo/lo.h>
 
 #include "zynmidirouter.h"
@@ -97,3 +100,5 @@ void reset_zyncoders();
 
 //-----------------------------------------------------------------------------
 
+
+#endif // ZYNCODER_I2C_H

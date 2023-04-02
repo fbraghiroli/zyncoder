@@ -23,6 +23,9 @@
  * ******************************************************************
  */
 
+#ifndef ZYNMASTER_H
+#define ZYNMASTER_H
+
 #include <jack/jack.h>
 
 //-----------------------------------------------------------------------------
@@ -34,3 +37,5 @@ int end_zynmaster_jack();
 int zynmaster_jack_process(jack_nframes_t nframes, void *arg);
 
 //-----------------------------------------------------------------------------
+
+#endif // ZYNMASTER_H

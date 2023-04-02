@@ -24,6 +24,9 @@
  * ******************************************************************
  */
 
+#ifndef ZYNAPTIK_H
+#define ZYNAPTIK_H
+
 #include <jack/jack.h>
 #include <jack/midiport.h>
 
@@ -167,3 +170,5 @@ int init_zynaptik();
 int end_zynaptik();
 
 //-----------------------------------------------------------------------------
+
+#endif // ZYNAPTIK_H

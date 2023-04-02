@@ -23,6 +23,9 @@
  * ******************************************************************
  */
 
+#ifndef ZYNMCP23008_H
+#define ZYNMCP23008_H
+
 #include <pthread.h>
 #include <wiringPi.h>
 
@@ -34,3 +37,5 @@
 pthread_t init_poll_zynswitches();
 
 //-----------------------------------------------------------------------------
+
+#endif // ZYNMCP23008_H

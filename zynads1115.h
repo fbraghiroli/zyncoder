@@ -23,6 +23,9 @@
  * ******************************************************************
  */
 
+#ifndef ZYNADS1115_H
+#define ZYNADS1115_H
+
 #include <stdint.h>
 #include <wiringPi.h>
 
@@ -51,3 +54,4 @@ void set_ads1115_rate(uint16_t base_pin, uint8_t rate);
 
 //-----------------------------------------------------------------------------
 
+#endif // ZYNADS1115_H

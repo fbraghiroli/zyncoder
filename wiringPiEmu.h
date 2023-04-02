@@ -23,6 +23,9 @@
  * ******************************************************************
  */
 
+#ifndef WIRINGPIEMU_H
+#define WIRINGPIEMU_H
+
 // Handy defines
 
 // Deprecated
@@ -92,3 +95,5 @@ extern "C" {
 #ifdef __cplusplus
 }
 #endif
+
+#endif // WIRINGPIEMU_H
